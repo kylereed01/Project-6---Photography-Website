@@ -1,0 +1,265 @@
+/* Global Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Spectral', serif;
+    background-color: black;
+}
+
+/* Header Styles */
+header {
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 20px;
+    height: 87px; 
+    z-index: 1000;
+}
+
+header img {
+    cursor: pointer;
+    margin: 20px;
+    width: 15%;
+}
+
+/* Image Hover Effect */
+img:hover {
+    transform: scale(2);
+}
+
+/* Navigation Styles */
+.navbar {
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    padding: 30px 0;
+    font-family: 'Ubuntu', sans-serif;
+    transition: all 0.3s ease;
+}
+
+.navbar.sticky {
+    padding: 15px 0;
+    background: black;
+}
+
+.navbar .max-width {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Logo Styles */
+.navbar .logo a {
+    color: #fff;
+    font-size: 35px;
+    font-weight: 600;
+}
+
+.navbar .logo a span {
+    color: crimson;
+    transition: all 0.3s ease;
+}
+
+.navbar.sticky .logo a span {
+    color: #fff;
+}
+
+/* Navigation Menu Styles */
+.nav_links {
+    list-style: none;
+}
+
+.nav_links li {
+    display: inline-block;
+    padding: 0px 10px;
+}
+
+.nav_links li a {
+    text-decoration: none;
+    position: relative;
+    padding: 0 10px;
+    font-weight: 500;
+    font-size: 16px;
+    color: white;
+}
+
+/* Navigation Hover Effect */
+.nav_links li a:after {
+    content: "";
+    position: absolute;
+    background-color: black;
+    height: 3px;
+    width: 0;
+    left: 0;
+    transition: width 0.3s ease;
+    bottom: -10px;
+}
+
+.nav_links li a:hover:after {
+    width: 100%;
+}
+
+/* Menu Button Styles */
+.menu-btn {
+    color: #fff;
+    font-size: 23px;
+    cursor: pointer;
+    display: none;
+}
+
+/* Scroll Up Button Styles */
+.scroll-up-btn {
+    position: fixed;
+    height: 45px;
+    width: 42px;
+    background: crimson;
+    right: 30px;
+    bottom: 10px;
+    text-align: center;
+    line-height: 45px;
+    color: #fff;
+    z-index: 9999;
+    font-size: 30px;
+    border-radius: 6px;
+    border-bottom-width: 2px;
+    cursor: pointer;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.scroll-up-btn.show {
+    bottom: 30px;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.scroll-up-btn:hover {
+    filter: brightness(90%);
+}
+
+/* Section Styles */
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* Typography Styles */
+h1 {
+    font-size: 90px;
+    color: white;
+    margin: 0;
+}
+
+p {
+    font-size: 26px;
+    color: white;
+    margin: 0;
+}
+
+/* Gallery Styles */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.gallery-image {
+    width: 30%;
+    margin: 5px;
+    cursor: pointer;
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.9);
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    width: auto;
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Testimonial Section Styles */
+.testimonial-container {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    padding: 30px;
+    box-sizing: border-box;
+    flex-direction: column;
+}
+
+.testimonial-title {
+    color: white;
+    text-align: center;
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+/* Slider Styles */
+.slider {
+    display: flex;
+    width: 100%;
+    max-width: 800px;
+}
+
+.slide {
+    display: flex;
+    width: 100%;
+}
+
+.slide-text {
+    width: 50%;
+    padding: 20px;
+}
+
+.slide-img {
+    width: 50%;
+}
+
+.slide-img img {
+    margin: 10px;
+    width: 70%;
+    height: auto;
+}
+
+.prev, .next {
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+/* Utility Classes */
+.responsive {
+    width: 100%;
+    height: auto;
+}
